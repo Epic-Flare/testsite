@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Survey Results</title>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+  body {
+    font-family: 'Open Sans', sans-serif;
+  }
+  .chart-box {
+    border: 2px solid #e5e7eb; /* light gray border */
+    border-radius: 8px;
+    padding: 16px;
+  }
+  .chart-label {
+    font-weight: 600;
+    margin-bottom: 8px;
+  }
+  .histogram {
+    height: 100px;
+    background-color: #f3f4f6; /* light gray background */
+    border-radius: 4px;
+    margin-bottom: 8px;
+  }
+  .histogram-bar {
+    height: 100%;
+    border-radius: 4px;
+  }
+</style>
+</head>
+<body class="bg-white text-gray-800">
+<div class="container mx-auto px-4 py-8">
+  <div class="chart-box">
+    <div class="text-lg chart-label">Results</div>
+    <div class="mb-4">Topic: "What do you think of the AAA bill?"</div>
+    <div class="flex justify-between mb-4">
+      <div class="w-1/3">
+        <div class="histogram">
+          <div class="histogram-bar bg-red-500" style="width: 30%;"></div>
+        </div>
+        <div class="text-center">Negative</div>
+      </div>
+      <div class="w-1/3">
+        <div class="histogram">
+          <div class="histogram-bar bg-green-500" style="width: 70%;"></div>
+        </div>
+        <div class="text-center">Positive</div>
+      </div>
+    </div>
+    <div class="flex justify-between">
+      <div class="w-1/2 pr-2">
+        <div class="chart-label">Necessity you judged</div>
+        <div class="histogram">
+          <!-- Placeholder for dynamic content -->
+        </div>
+      </div>
+      <div class="w-1/2 pl-2">
+        <div class="chart-label">Suitability you judged</div>
+        <div class="histogram">
+          <!-- Placeholder for dynamic content -->
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="mt-4">
+    <div class="chart-label">The score evaluated is written here.</div>
+    <!-- Placeholder for dynamic content -->
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .social-btn {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 0.5rem;
+        }
+        .social-btn:hover {
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 flex items-center justify-center h-screen">
+    <div class="bg-white p-8 rounded-lg shadow-lg max-w-md w-full">
+        <h1 class="text-2xl font-bold mb-4">Log-in</h1>
+        <form id="loginForm" class="space-y-4">
+            <div>
+                <label for="username" class="block text-sm font-medium text-gray-700">Username</label>
+                <input type="text" id="username" name="username" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500" required>
+            </div>
+            <div>
+                <label for="password" class="block text-sm font-medium text-gray-700">Password</label>
+                <input type="password" id="password" name="password" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500" required>
+            </div>
+            <div class="flex justify-between items-center">
+                <div>
+                    <button type="button" class="social-btn bg-green-500 text-white">N</button>
+                    <button type="button" class="social-btn bg-yellow-400 text-white">Y</button>
+                    <button type="button" class="social-btn bg-red-500 text-white">G</button>
+                </div>
+                <button type="submit" class="px-4 py-2 bg-indigo-600 text-white rounded-md hover:bg-indigo-700">Login</button>
+            </div>
+            <div class="text-sm mt-4">
+                <a href="RegisterPage.html" target="_self" class="font-medium text-indigo-600 hover:text-indigo-500">Register</a>
+                <span class="mx-1">|</span>
+                <a href="#" class="font-medium text-indigo-600 hover:text-indigo-500">Forgot password?</a>
+            </div>
+        </form>
+    </div>
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            // Placeholder for login logic
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+            console.log('Login attempt with:', username, password);
+            // Here you would typically handle the login logic, e.g., sending credentials to a server
+            // For now, we'll just reset the form fields
+            this.reset();
+            // And simulate a successful login by redirecting to a "Main Page"
+            window.location.href = 'https://makereal.link/fakepage?success=true'; // Redirect to the provided URL on successful login
+        });
+    </script>
+</body>
+</html>
